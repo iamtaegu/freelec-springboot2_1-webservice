@@ -59,3 +59,4 @@ git clone https://github.com/iamtaegu/freelec-springboot2-webservice.git master
 git remote add master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull https://github.com/iamtaegu/freelec-springboot2-webservice.git master
+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

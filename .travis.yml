@@ -4,13 +4,16 @@ jdk:
 
 branches:
  only:
-   - main
+   - main 
 
 # Travis CI 서버의 Home
 cache:
  directories:
    - '$HOME/.m2/repository'
    - '$HOME/.gradle'
+
+before install:
+  - chmod +x gradlew
      
 script: "./gradlew clean build"
      
