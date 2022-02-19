@@ -24,8 +24,11 @@ public class IndexController {
     /*
     * @LoginUser를 사용해 세션 정보를 가져올 수 있다
     * */
-    public String index (Model model, @LoginUser SessionUser user) {
+    //public String index (Model model, @LoginUser SessionUser user) {
+    public String index (Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
+
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if (user != null) {
             model.addAttribute("userName", user.getName());
