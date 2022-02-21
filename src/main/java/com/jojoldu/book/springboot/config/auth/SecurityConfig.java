@@ -24,11 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/v1/**").hasRole(Role.GUEST.name())
                 .anyRequest().authenticated() // 설정된 값들 이외의 URI*/
                 .and()
-                .logout()//로그아웃 설정 진입점
-                .logoutSuccessUrl("/")
+                    .logout()//로그아웃 설정 진입점
+                        .logoutSuccessUrl("/")
                 .and()
-                .oauth2Login()
-                .userInfoEndpoint()//OAuth2 로그인 성공 이후 사용자 정보를 가져올 때의 설정을 담당
-                .userService(customOAuth2UserService); //로그인 성공 시 후속 조치를 진행할 UserService인터페이스 구현체 등록
+                    .oauth2Login()
+                        .userInfoEndpoint()//OAuth2 로그인 성공 이후 사용자 정보를 가져올 때의 설정을 담당
+                            .userService(customOAuth2UserService); //로그인 성공 시 후속 조치를 진행할 UserService인터페이스 구현체 등록
     }
 }

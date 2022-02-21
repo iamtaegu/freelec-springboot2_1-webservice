@@ -33,6 +33,8 @@ public class OAuthAttributes {
     }
 
     private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes) {
+        System.out.println("OAuthAttributes start");
+        System.out.println("OAuthAttributes getName= " + attributes.get("name"));
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
                 .email((String) attributes.get("email"))

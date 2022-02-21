@@ -25,17 +25,35 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
+
+        System.out.println("CustomOAuth2UserService loadUser start");
+
         OAuth2UserService delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
+        System.out.println("CustomOAuth2UserService loadUser registrationId=" + registrationId);
+
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
+        System.out.println("CustomOAuth2UserService loadUser userNameAttributeName=" + userNameAttributeName);
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
-        httpSession.setAttribute("user", new SessionUser(user));
+        System.out.println("@@@@@@@@@@@@@@ CustomOAuth2UserService User=" + user.toString());
+        System.out.println("@@@@@@@@@@@@@@ CustomOAuth2UserService User=" + user.getName());
+        System.out.println("@@@@@@@@@@@@@@ CustomOAuth2UserService User=" + user.getEmail());
+        System.out.println("@@@@@@@@@@@@@@ CustomOAuth2UserService User=" + user.getPicture());
+
+        SessionUser sessionUser = new SessionUser(user);
+        System.out.println("@@@@@@@@@@@@@@ CustomOAuth2UserService sessionUser=" + sessionUser.getName());
+        httpSession.setAttribute("user", sessionUser);
+        // 여기가 이슈네.
+        // 아래 print가 먼저 찍힘
+        //httpSession.setAttribute("user", new SessionUser(user));
+
+        System.out.println("CustomOAuth2UserService loadUser end");
 
         return new DefaultOAuth2User(
                 Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
