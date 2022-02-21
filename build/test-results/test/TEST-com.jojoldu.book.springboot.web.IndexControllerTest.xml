@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jojoldu.book.springboot.web.IndexControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-17T11:43:47" hostname="ip-172-31-12-162.ap-northeast-2.compute.internal" time="0.346">
+  <properties/>
+  <testcase name="메인페이지_로딩" classname="com.jojoldu.book.springboot.web.IndexControllerTest" time="0.346"/>
+  <system-out><![CDATA[2022-02-17 20:43:43.633  INFO 17754 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jojoldu.book.springboot.web.IndexControllerTest], using SpringBootContextLoader
+2022-02-17 20:43:43.636  INFO 17754 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jojoldu.book.springboot.web.IndexControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-02-17 20:43:43.636  INFO 17754 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jojoldu.book.springboot.web.IndexControllerTest]: IndexControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-02-17 20:43:43.640  INFO 17754 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jojoldu.book.springboot.Application for test class com.jojoldu.book.springboot.web.IndexControllerTest
+2022-02-17 20:43:43.641  INFO 17754 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2022-02-17 20:43:43.643  INFO 17754 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d2ed4bb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@790d62dd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49cd22aa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@66950eba, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5da585df, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4f2c0f3c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f54ac01, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@217a8f8f, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@50007d02, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f7addd1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3504529b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40f7b543, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@13cc3832, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3a71ebcf]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.7.RELEASE)
+
+2022-02-17 20:43:43.699  INFO 17754 --- [    Test worker] c.j.b.s.web.IndexControllerTest          : Starting IndexControllerTest on ip-172-31-12-162.ap-northeast-2.compute.internal with PID 17754 (started by ec2-user in /home/ec2-user/app/step1/freelec-springboot2_1-webservice)
+2022-02-17 20:43:43.700  INFO 17754 --- [    Test worker] c.j.b.s.web.IndexControllerTest          : No active profile set, falling back to default profiles: default
+2022-02-17 20:43:44.101  INFO 17754 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-02-17 20:43:44.130  INFO 17754 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 2 repository interfaces.
+2022-02-17 20:43:44.369  INFO 17754 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$501b1dfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 20:43:44.855  INFO 17754 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-02-17 20:43:44.931  INFO 17754 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 20:43:44.934  INFO 17754 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-02-17 20:43:45.241  INFO 17754 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 20:43:45.241  INFO 17754 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1539 ms
+2022-02-17 20:43:45.538  INFO 17754 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-02-17 20:43:45.547  INFO 17754 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-02-17 20:43:45.595  INFO 17754 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-02-17 20:43:45.611  INFO 17754 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+Hibernate: drop table if exists posts
+Hibernate: drop table if exists user
+Hibernate: create table posts (id bigint not null auto_increment, created_date datetime, modified_date datetime, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
+Hibernate: create table user (id bigint not null auto_increment, created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
+2022-02-17 20:43:45.749  INFO 17754 --- [    Test worker] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3e6bf733'
+2022-02-17 20:43:45.749  INFO 17754 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 20:43:46.618  INFO 17754 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-02-17 20:43:46.924  INFO 17754 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca88be4, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b6369a1, org.springframework.security.web.header.HeaderWriterFilter@54e512b2, org.springframework.security.web.authentication.logout.LogoutFilter@35571452, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@48076f5c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@75e39099, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75b95525, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b4ab31c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73670dc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f6be194, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48c456a6, org.springframework.security.web.session.SessionManagementFilter@4a0605d1, org.springframework.security.web.access.ExceptionTranslationFilter@1f36e356, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c756401]
+2022-02-17 20:43:47.295  INFO 17754 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 20:43:47.328  WARN 17754 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-17 20:43:47.383  INFO 17754 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-02-17 20:43:47.905  INFO 17754 --- [    Test worker] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2022-02-17 20:43:47.957  INFO 17754 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 43125 (http) with context path ''
+2022-02-17 20:43:47.962  INFO 17754 --- [    Test worker] c.j.b.s.web.IndexControllerTest          : Started IndexControllerTest in 4.314 seconds (JVM running for 24.466)
+2022-02-17 20:43:48.155  INFO 17754 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-17 20:43:48.156  INFO 17754 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-17 20:43:48.171  INFO 17754 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+SessionUser user is null 
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_ order by posts0_.id DESC
+user is not null userName = null
+user.toString() >>> com.jojoldu.book.springboot.config.auth.dto.SessionUser@35deabd2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

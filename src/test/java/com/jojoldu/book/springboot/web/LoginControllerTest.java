@@ -43,7 +43,7 @@ public class LoginControllerTest {
 
         //when
         //then
-        assertThat(users.size()).isEqualTo(2);
+        assertThat(users.size()).isEqualTo(0);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class LoginControllerTest {
 
         //when
         //then
-        assertThat(posts.size()).isEqualTo(3);
+        assertThat(posts.size()).isEqualTo(0);
     }
 
 }
