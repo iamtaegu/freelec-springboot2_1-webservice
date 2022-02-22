@@ -60,7 +60,7 @@ git remote add master https://github.com/iamtaegu/freelec-springboot2-webservice
 git pull master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull https://github.com/iamtaegu/freelec-springboot2-webservice.git master
 
-pwd: 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
+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
 
 fuser 8080/tcp
 
