@@ -59,7 +59,8 @@ git clone https://github.com/iamtaegu/freelec-springboot2-webservice.git master
 git remote add master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull https://github.com/iamtaegu/freelec-springboot2-webservice.git master
-pwd:  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
+
+pwd: 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
 
 fuser 8080/tcp
 
