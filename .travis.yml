@@ -12,9 +12,6 @@ cache:
    - '$HOME/.m2/repository'
    - '$HOME/.gradle'
 
-before install:
-  - chmod +x gradlew
-     
 script: "./gradlew clean build"
 
 before_deploy:
@@ -44,8 +41,6 @@ deploy:
     deployment_group: freelec-springboot2_1-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
-    on:
-      all_branches: true
      
 # CI 실행 완료 시 메일로 알람
 notifications:
