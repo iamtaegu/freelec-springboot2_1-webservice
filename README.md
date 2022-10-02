@@ -70,3 +70,5 @@ travis 연동
 enginx 연동
 2022-03-01
 재기동
+2022-10-02 
+ec2 webservices 새로 생성
