@@ -11,7 +11,7 @@ echo "> Git pull"
 
 echo "> 프로젝트 Build 시작"
 
-./gradlew build
+./gradlew build -x test
 
 echo "> step1 디렉토리로 이동"
 
