@@ -60,12 +60,15 @@ git remote add master https://github.com/iamtaegu/freelec-springboot2-webservice
 git pull master https://github.com/iamtaegu/freelec-springboot2-webservice.git
 git pull https://github.com/iamtaegu/freelec-springboot2-webservice.git master
 
-pwd: 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
+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
 
 fuser 8080/tcp
 
 2022-02-21
 travis 연동
->>>>>>> 6114b79a43ed30990bd659d1f9e910a99de82874
-
-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
+2022-02-23
+enginx 연동
+2022-03-01
+재기동
+2022-10-02 
+ec2 webservices 변경
