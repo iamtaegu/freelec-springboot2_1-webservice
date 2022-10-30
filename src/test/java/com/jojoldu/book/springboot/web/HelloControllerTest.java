@@ -17,15 +17,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(controllers = HelloController.class,
-        excludeFilters = {
+@RunWith(SpringRunner.class) // SpringRunner 스프링 실행자 사용(스프링 부트 테스트와 JUnit 사이 연결자)
+@WebMvcTest(controllers = HelloController.class // Spirng MVC에 집중할 수 있는 어노테이션
+        ,excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
         }
 )
 public class HelloControllerTest {
 
     @Autowired
+    /*
+    * 웹API 테스트에 사용
+    * 스프링MVC 테스트 시작점
+    * */
     private MockMvc mvc;
 
     @WithMockUser(roles = "USER")
@@ -49,7 +53,7 @@ public class HelloControllerTest {
                             .param("name", name)
                             .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name", is(name)))
+                .andExpect(jsonPath("$.name", is(name))) //JSON 응답값을 필드별로 검증할 수 있는 메소드
                 .andExpect(jsonPath("$.amount", is(amount)));
     }
 }
