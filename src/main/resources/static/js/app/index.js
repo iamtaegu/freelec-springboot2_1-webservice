@@ -9,6 +9,10 @@ var main = {
             _this.save();
         });
 
+        $('#btn-update-view').on('click', function () {
+            _this.updateView();
+        });
+
         $('#btn-update').on('click', function () {
             _this.update();
         });
@@ -72,8 +76,10 @@ var main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
+    },
+    updateView : function () {
+        window.location.href = '/posts/update/' + $('#id').val();
     }
-
 };
 
 main.init();

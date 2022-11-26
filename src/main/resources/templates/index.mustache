@@ -1,6 +1,10 @@
 {{>layout/header}}
 
-<h1>웹 서비스 Ver.2</h1>
+<h1>웹 서비스 Ver.3</h1>
+<dt>
+    <dl>(done) yml 적용, contents view </dl>
+    <dl>(todo) typescript, CI/CD </dl>
+</dt>
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-6">
@@ -30,7 +34,7 @@
         {{#posts}}
             <tr>
                 <td>{{id}}</td>
-                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td><a href="/posts/content/{{id}}">{{title}}</a></td>
                 <td>{{author}}</td>
                 <td>{{modifiedDate}}</td>
             </tr>

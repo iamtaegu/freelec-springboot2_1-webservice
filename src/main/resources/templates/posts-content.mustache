@@ -1,0 +1,28 @@
+{{>layout/header}}
+
+<h1>게시글</h1>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="title">글 번호</label>
+            <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" class="form-control" id="title" value="{{post.title}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="author"> 작성자 </label>
+            <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="view-content"> 내용 </label>
+            <div class="form-control" id="view-content" style="height:650px;" escapeXml="false" >{{post.content}}</div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="btn-update-view">수정</button>
+</div>
+
+{{>layout/footer}}
