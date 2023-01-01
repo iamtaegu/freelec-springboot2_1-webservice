@@ -7,7 +7,11 @@ cd $REPOSITORY/$PROJECT_NAME
 
 echo "> Git pull"
 
-#git pull
+git pull
+
+echo "Compile typescript"
+
+$REPOSITORY/$PROJECT_NAME/src/main/resources/static/ts/node_modules/typescript/bin/tsc -p $REPOSITORY/$PROJECT_NAME/src/main/resources/static/ts/tsconfig.json
 
 echo "> 프로젝트 Build 시작"
 
