@@ -1,0 +1,46 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+<!--index.js 추가 -->
+<script src="/js/app/index.js"></script>
+<!--CKEditor 추가 -->
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+
+<script>
+
+ClassicEditor
+        .create( document.querySelector( '#content' ))
+        .catch( error => {
+        console.error( error );
+} );
+
+$("#content").css("width","1000px");
+
+$(".ck-content").keydown(function(e) {
+
+    if(e.keyCode === 9) { // tab was pressed
+
+	     // get caret position/selection
+	     var start = this.selectionStart;
+	     var end = this.selectionEnd;
+
+	     var $this = $(this);
+	     var value = $this.val();
+
+	     // set textarea value to: text before caret + tab + text after caret
+	     $this.val(value.substring(0, start)
+	                    + "\t"
+	                    + value.substring(end));
+
+	     // put caret at right position again (add one for the tab)
+	     this.selectionStart = this.selectionEnd = start + 1;
+
+	     // prevent the focus lose
+	     e.preventDefault();
+	 }
+});
+
+</script>
+
+</body>
+</html>
