@@ -1,5 +1,6 @@
 "use strict";
 /*
+* ts/index.ts > js/app/index.js 컴파일
 * 브라우저의 스코프는 공용 공간으로 사용되기 때문에
 * var main 사용으로 index.js의 유효범위를 생성
 */
