@@ -10,7 +10,7 @@
 <script>
 
 ClassicEditor
-    .create( document.querySelector( '#content' ), {
+    .create( document.querySelector( '#editor' ), {
         // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
     } )
     .then( editor => {
@@ -19,8 +19,6 @@ ClassicEditor
     .catch( err => {
         console.error( err.stack );
     } );
-
-$("#content").css("width","1000px");
 
 $(".ck-content").keydown(function(e) {
 
