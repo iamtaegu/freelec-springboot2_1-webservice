@@ -20,6 +20,17 @@ ClassicEditor
         console.error( err.stack );
     } );
 
+ClassicEditor
+    .create( document.querySelector( '#view-editor' ), {
+        toolbar: []
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+
 $(".ck-content").keydown(function(e) {
 
     if(e.keyCode === 9) { // tab was pressed
