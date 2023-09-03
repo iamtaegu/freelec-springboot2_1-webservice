@@ -1,7 +1,7 @@
 buildscript {
     // springBootVersion 전역변수 설정
     ext {
-        springBootVersion = '2.1.7.RELEASE'
+        springBootVersion = '2.2.5.RELEASE'
     }
 
     repositories {
