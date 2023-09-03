@@ -1,17 +1,13 @@
 spring:
-  datasource:
-    url: jdbc:mariadb://springboot-webservices-2022.cvokj1cptwnp.us-east-1.rds.amazonaws.com:3306/springboot_webservices_2022
-    username: admin
-    password: tlsRbqlqjs1!
-    driver-class-name: org.mariadb.jdbc.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+  application:
+    name: board-service
+  cloud:
+    config:
+      #uri: http://172.31.86.214:8071
+      uri: http://54.84.19.74:8071
 
-  jpa:
-    hibernate:
-      ddl-auto: none
-
-  profiles:
-    include: oauth, real-db
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.optimagrowth: DEBUG
